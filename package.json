@@ -1,0 +1,23 @@
+{
+  "name": "trustgrid",
+  "private": true,
+  "scripts": {
+    "test": "pnpm -r test --parallel && vitest run --config vitest.config.ts",
+    "test:unit": "pnpm --filter shared test && pnpm --filter agents test && pnpm --filter integrations test",
+    "test:e2e": "playwright test",
+    "lint": "eslint . --max-warnings 0",
+    "format": "prettier --write \"**/*.{ts,tsx,js,json,md}\"",
+    "build": "pnpm -r build --parallel"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.49.0",
+    "eslint": "^9.0.0",
+    "prettier": "^3.3.0",
+    "typescript": "^5.6.0",
+    "vitest": "^2.1.0"
+  },
+  "packageManager": "pnpm@9",
+  "engines": {
+    "node": ">=20"
+  }
+}
