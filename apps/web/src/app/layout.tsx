@@ -1,3 +1,5 @@
+import { Shell } from "@/components/Shell";
+
 export default function RootLayout({
   children,
 }: {
@@ -5,7 +7,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Shell>{children}</Shell>
+      </body>
     </html>
   );
 }
