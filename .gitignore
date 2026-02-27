@@ -1,6 +1,21 @@
+# Dependencies and build
 node_modules
 .pnpm-store
 dist
 .next
+*.tsbuildinfo
+
+# Env and secrets
+.env
+.env.*
+!.env.example
+
+# Logs and reports
 *.log
-.env*
+playwright-report/
+test-results/
+coverage/
+
+# OS
+.DS_Store
+Thumbs.db
